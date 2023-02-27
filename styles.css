@@ -7,7 +7,7 @@
 
 .navbar {
     background: #f8efdf;
-    height: 80px;
+    height: 80px; /*Make it bigger*/
     display: flex;
     justify-content: center;
     align-items: center;
