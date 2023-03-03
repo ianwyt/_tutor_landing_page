@@ -5,6 +5,8 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+/* Navbar Section CSS */
+
 .navbar {
     background: #f8efdf;
     height: 80px; /*Make it bigger*/
@@ -17,7 +19,7 @@
     z-index: 999;
 }
 
- .navbar__container {
+.navbar__container {
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -26,9 +28,9 @@
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 50px;
- }
+}
 
- #navbar__logo {
+#navbar__logo {
     background-color: #3f3d56;
     background-image: linear-gradient(to top, #08080a 0%, #2f2e41 100%);
     background-size: 100%;
@@ -41,41 +43,41 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem; /*Logo font*/
- }
+}
 
- .fa-gem {
+.fa-gem {
     margin-right: 0.5rem;
- }
+}
 
- .navbar__menu {
+.navbar__menu {
     display: flex;
     align-items: center;
     list-style: none;
     text-align: center;
- }
+}
 
- .navbar__item {
+.navbar__item {
     height: 80px;
- }
+}
 
- .navbar__links {
+.navbar__links {
     color: #2f2e41;
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
- }
+}
 
- .navbar__btn {
+.navbar__btn {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 1rem;
     width: 100%;
- }
+}
 
- .button {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,7 +90,7 @@
     border-radius: 4px;
     background: #2f2e41;
     color: #fff;
- }
+}
 
 .button:hover {
     background: #3bb3ce; /* #403828 */
@@ -99,6 +101,8 @@
     color: #3bb3ce; /* #403828 */
     transition: all 0.3s ease;
 }
+
+/* Mobile Responsive */
 
 @media screen and (max-width: 960px) {
     .navbar__container {
@@ -144,7 +148,7 @@
         height: 3px;
         margin: 5px auto;
         transition: all 0.3s ease-in-out;
-        background: #3bb3ce; /* #403828 */
+        background: #2f2e41; /* #403828 */
     }
 
     .navbar__item {
@@ -170,6 +174,7 @@
     }
 
     /* Better to make it smaller */
+
     .button {
         display: flex;
         justify-content: center;
@@ -213,7 +218,7 @@
     background-color: #f8efdf;
     z-index: 1;
     width: 100%;
-    min-width: 1300px;
+    max-width: 1300px;
     padding: 0 50px;
 }
 
@@ -230,6 +235,103 @@
 
 .main__content p {
     margin-top: 1rem;
-    font-style: 2rem;
+    font-size: 2rem;
     font-weight: 700;
+    color: #3bb3ce;
+}
+
+.main__btn {
+    font-size: 1rem;
+    background: #2f2e41;
+    color: #fff;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #3bb3ce;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main__btn:hover {
+    color: #fff;
+}
+
+.main__btn:hover:after {
+    width: 100%;
+}
+
+.main__img--container {
+    text-align: center;
+}
+
+#main__img {
+    height: 90%;
+    width: 90%;
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 768px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .main__content p {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .main__btn {
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
 }
